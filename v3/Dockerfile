@@ -1,6 +1,9 @@
+# This is a Dockerfile running plan SSH daemon
+
 FROM jimmychu0807/ubuntu1204:v2
 MAINTAINER Jimmy Chu <jimmychu@hkwtf.com>
 
+USER root
 ADD .ssh/id_docker.pub /root/.ssh/
 WORKDIR /root/.ssh
 RUN cat id_docker.pub >> authorized_keys
